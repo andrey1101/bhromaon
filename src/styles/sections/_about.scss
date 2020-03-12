@@ -1,0 +1,117 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+
+.about {
+  background-image: url(./../../build/assets/img/choose_us.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 20px;
+
+    @media screen and (max-width: $deviceSizeSM) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    div {
+      @media screen and (max-width: $deviceSizeSM) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 540px;
+    text-align: left;
+    padding-right: 20px;
+
+    @media screen and (max-width: $deviceSizeSM) {
+      max-width: 350px;
+      text-align: center;
+    }
+  }
+
+  &__text-title {
+    font-size: 36px;
+  }
+
+  &__text-description {
+    color: $textPrimary;
+    margin-top: 62px;
+  }
+
+  &__text-button {
+    max-width: 224px;
+    line-height: 60px;
+    background-color: $primaryMain;
+    margin-top: 50px;
+
+    @media screen and (max-width: $deviceSizeSM) {
+      padding: 0 10px;
+    }
+
+    &:hover {
+      transition: 0.1s ease;
+      outline: 2px solid $white;
+    }
+
+    button {
+      color: $white;
+      text-transform: uppercase;
+      margin: 0 auto;
+    }
+  }
+
+  &__image {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image-item {
+    @media screen and (max-width: $deviceSizeSM) {
+      margin-top: 50px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &:first-child:hover {
+      transform: translateY(-10%) scale(1.1);
+      transition: 0.15s ease;
+      cursor: pointer;
+
+      @media screen and (max-width: $deviceSizeSM) {
+        transform: none;
+      }
+    }
+
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+
+      &:hover {
+        transform: translateY(10%) scale(1.1);
+        transition: 0.15s ease;
+        cursor: pointer;
+
+        @media screen and (max-width: $deviceSizeSM) {
+          transform: none;
+        }
+      }
+
+      img {
+        margin-top: 5px;
+        width: 350px;
+        height: 220px;
+      }
+    }
+  }
+}

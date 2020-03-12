@@ -1,0 +1,61 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+
+.reviews {
+  background-image: url(./../../build/assets/img/reviews.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    padding: 120px 20px 100px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  &__content {
+    display: flex;
+    margin-top: 90px;
+
+    @media screen and (max-width: $deviceSizeMD) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__content-image {
+    img {
+      @media screen and (max-width: $deviceSizeSM) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__content-text {
+    text-align: left;
+    background-color: $grey;
+    padding: 36px 20px;
+
+    @media screen and (max-width: $deviceSizeMD) {
+      max-width: 445px;
+      margin: 0 auto;
+    }
+  }
+
+  &__content-text-subtitle {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  &__content-text-blockquote {
+    display: flex;
+    margin-top: 20px;
+    line-height: 26px;
+
+    img {
+      margin-top: -30px;
+    }
+  }
+}

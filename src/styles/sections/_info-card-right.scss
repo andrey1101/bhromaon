@@ -1,0 +1,12 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+@import "./info-card-left";
+
+.right {
+  background-image: url(./../../build/assets/img/info-second.png);
+
+  .content-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

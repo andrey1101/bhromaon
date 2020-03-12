@@ -1,0 +1,45 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+
+.info-card {
+  background-image: url(./../../build/assets/img/info-first.png);
+  background-size: cover;
+
+  &__container {
+    padding: 230px 20px 100px;
+  }
+
+  &__block {
+    max-width: 540px;
+    background-color: #232323;
+    opacity: 0.9;
+    padding: 50px 30px;
+    text-align: left;
+
+    p:nth-of-type(2) {
+      text-transform: uppercase;
+    }
+
+    p:not(.content__text) {
+      margin-bottom: 30px;
+    }
+  }
+  &__block-button {
+    max-width: 224px;
+    line-height: 60px;
+    background-color: $primaryMain;
+    margin-top: 50px;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.1s ease;
+      outline: 2px solid $white;
+    }
+
+    button {
+      color: $white;
+      text-transform: uppercase;
+      margin: 0 auto;
+    }
+  }
+}

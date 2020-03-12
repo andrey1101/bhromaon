@@ -1,0 +1,31 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+
+.steps {
+  background-color: $grey;
+  font-size: 36px;
+  cursor: default;
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 0 110px;
+
+    @media screen and (max-width: $deviceSizeSM) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    > div {
+      @media screen and (max-width: $deviceSizeSM) {
+        margin: 20px 0;
+      }
+    }
+
+    .icon {
+      font-size: 50px;
+      margin-bottom: 32px;
+    }
+  }
+}

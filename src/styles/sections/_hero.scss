@@ -1,0 +1,130 @@
+@import "./../constants/index.scss";
+@import "./../mixins.scss";
+
+.hero {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.1)),
+    url(./../../build/assets/img/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    font-weight: $fontWeightBold;
+    font-size: 48px;
+    text-transform: uppercase;
+    cursor: default;
+    @media screen and (max-width: $deviceSizeXS) {
+      font-size: 36px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    cursor: default;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 260px 0 110px;
+
+    @media screen and (max-width: $deviceSizeXXXS) {
+      padding: 220px 0 200px;
+    }
+  }
+
+  &__search {
+    display: flex;
+    justify-content: center;
+    width: 650px;
+    margin-top: 48px;
+
+    @media screen and (max-width: $deviceSizeSM) {
+      display: flex;
+      flex-direction: column;
+      max-width: 445px;
+      width: 100%;
+      padding: 0 20px;
+    }
+    @media screen and (max-width: $deviceSizeXS) {
+      max-width: 360px;
+    }
+  }
+
+  &__search-input {
+    width: 500px;
+    height: 60px;
+    padding: 0 16px;
+    text-align: center;
+
+    @media screen and (max-width: $deviceSizeSM) {
+      width: 100%;
+      padding: 0 8px;
+    }
+
+    @include placeholder {
+      letter-spacing: 5px;
+      @media screen and (max-width: $deviceSizeXS) {
+        letter-spacing: 1px;
+      }
+    }
+
+    &:focus {
+      @include placeholder {
+        opacity: 0;
+        transition: opacity 300ms;
+      }
+    }
+  }
+
+  &__search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    color: $white;
+    background-color: $primaryMain;
+    border: 2px solid $white;
+    padding: 0 18px 0 28px;
+    text-transform: uppercase;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+      transition: 0.2s ease;
+    }
+
+    @media screen and (max-width: $deviceSizeSM) {
+      width: 100%;
+    }
+
+    #search {
+      padding-right: 16px;
+    }
+  }
+
+  &__move-button {
+    // position: absolute;
+    opacity: 0.7;
+    // bottom: 110px;
+    cursor: pointer;
+    margin-top: 70px;
+
+    // @media screen and (max-width: $deviceSizeSM) {
+    //   bottom: 80px;
+    // }
+    // @media screen and (max-width: $deviceSizeXXXS) {
+    //   bottom: 30px;
+    // }
+
+    &:hover {
+      opacity: 1;
+      transition: 0.1s ease;
+      transform: scale(1.2);
+    }
+  }
+}
