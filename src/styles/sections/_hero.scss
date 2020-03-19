@@ -5,8 +5,7 @@
   position: relative;
   display: flex;
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.1)),
-    url(./../../build/assets/img/hero.png);
+  background-image: url(./../../build/assets/img/hero.png);
   background-repeat: no-repeat;
   background-size: cover;
 
